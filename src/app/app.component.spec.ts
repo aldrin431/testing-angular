@@ -32,4 +32,11 @@ describe('AppComponent', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('.content span')?.textContent).toContain('Testing Angular Tutorial app is running!');
   });
+
+  it(`should change title to 'Angular'`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    app.updateTitle('Angular');
+    expect(app.title).toEqual('Angular');
+  })
 });

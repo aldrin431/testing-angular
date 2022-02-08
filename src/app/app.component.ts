@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Testing Angular Tutorial';
+
+  updateTitle(title: string): void {
+    this.title = title;
+  }
 }
